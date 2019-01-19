@@ -1,4 +1,5 @@
 using UnityAndroidSensors.Scripts.Utils;
+using UnityEngine;
 
 namespace UnityAndroidSensors.Scripts.Core
 {
@@ -7,16 +8,17 @@ namespace UnityAndroidSensors.Scripts.Core
      */
     public abstract class FloatSensorReader : SensorReader
     {
-        public FloatVar Value { get; set; }
+        [SerializeField]
+        protected FloatVar value;
         
         protected override void Execute()
         {
-            Value.value = FirstValue;
+            value.value = FirstValue;
         }
 
         public int CompareTo(float other)
         {
-            return Value.value.CompareTo(other);
+            return value.value.CompareTo(other);
         }
     }
 }

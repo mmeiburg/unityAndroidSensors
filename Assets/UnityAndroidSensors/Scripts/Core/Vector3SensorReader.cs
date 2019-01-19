@@ -8,11 +8,12 @@ namespace UnityAndroidSensors.Scripts.Core
      */
     public abstract class Vector3SensorReader : SensorReader
     {
-        public Vector3Var Value { get; protected set; }
+        [SerializeField]
+        protected Vector3Var value;
 
         protected override void Execute()
         {
-            Value.value = new Vector3(FirstValue,SecondValue, ThirdValue);
+            value.value = new Vector3(FirstValue,SecondValue, ThirdValue);
         }
     }
 }

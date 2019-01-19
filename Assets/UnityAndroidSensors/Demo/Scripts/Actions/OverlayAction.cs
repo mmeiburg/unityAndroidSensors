@@ -1,12 +1,13 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UnityAndroidSensors.Demo.Scripts.Actions
 {
     public class OverlayAction : MonoBehaviour
     {
         [SerializeField]
-        private SpriteRenderer spriteRenderer;
+        private Image image;
 
         [SerializeField]
         private Color lightOffColor;
@@ -16,19 +17,14 @@ namespace UnityAndroidSensors.Demo.Scripts.Actions
         [SerializeField]
         private float lerp = 0.3f;
         
-        private void Awake()
+        public void StartNight()
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            image.DOColor(lightOffColor, lerp);
         }
 
-        public void StartSleep()
+        public void StopNight()
         {
-            spriteRenderer.DOColor(lightOffColor, lerp);
-        }
-
-        public void EndSleep()
-        {
-            spriteRenderer.DOColor(lightOnColor, lerp);
+            image.DOColor(lightOnColor, lerp);
         }
     }
 }

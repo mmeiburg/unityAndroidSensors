@@ -22,9 +22,9 @@ namespace UnityAndroidSensors.Scripts.Utils
         [SerializeField]
         private UnityEvent onEvent;
         [SerializeField]
-        private CompareOptions option;
-        [SerializeField]
         private TVar variable;
+        [SerializeField]
+        private CompareOptions option;
         [SerializeField]
         private TType constant;
 

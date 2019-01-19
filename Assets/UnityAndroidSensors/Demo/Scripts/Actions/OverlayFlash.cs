@@ -21,7 +21,7 @@ namespace UnityAndroidSensors.Demo.Scripts.Actions
             oldColor = image.color;
         }
 
-        public void Shake()
+        public void Perform()
         {
             Sequence seq = DOTween.Sequence();
 

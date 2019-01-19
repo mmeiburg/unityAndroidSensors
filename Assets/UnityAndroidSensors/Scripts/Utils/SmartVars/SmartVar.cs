@@ -5,7 +5,7 @@ namespace UnityAndroidSensors.Scripts.Utils
 {
     public abstract class SmartVar<T> : ScriptableObject, ISerializationCallbackReceiver
     {
-        [NonSerialized]
+        //[NonSerialized]
         public T value;
         
         public T defaultValue;

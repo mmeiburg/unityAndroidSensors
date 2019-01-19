@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5851632342007375128}
   - component: {fileID: 4759878376952163992}
   m_Layer: 0
-  m_Name: PRE_OnSleepingStart
+  m_Name: PRE_OnLightOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  option: 0
-  variable: {fileID: 0}
-  constant: 0
+  option: 4
+  variable: {fileID: 11400000, guid: cb4787d31f988ad43a0ef2a4e90779ad, type: 2}
+  constant: 5

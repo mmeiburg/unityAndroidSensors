@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e15af3a5f3874b94b3af2330f899078c, type: 3}
-  m_Name: Acceleration
+  m_Name: Light
   m_EditorClassIdentifier: 
   value: 0
+  defaultValue: 0

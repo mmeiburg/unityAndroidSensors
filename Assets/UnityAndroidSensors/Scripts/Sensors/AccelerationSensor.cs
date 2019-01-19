@@ -10,7 +10,7 @@ namespace UnityAndroidSensors.Scripts.Sensors
         
         protected override void Execute()
         {
-            Value.value = new Vector3(
+            value.value = new Vector3(
                     LowPass(FirstValue),
                     LowPass(SecondValue),
                     LowPass(ThirdValue)) * -1f;

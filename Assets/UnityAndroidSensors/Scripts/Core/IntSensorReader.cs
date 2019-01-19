@@ -1,4 +1,5 @@
 using UnityAndroidSensors.Scripts.Utils;
+using UnityEngine;
 
 namespace UnityAndroidSensors.Scripts.Core
 {
@@ -7,16 +8,17 @@ namespace UnityAndroidSensors.Scripts.Core
      */
     public abstract class IntSensorReader : SensorReader
     {
-        public IntVar Value { get; set; }
+        [SerializeField]
+        protected IntVar value;
         
         protected override void Execute()
         {
-            Value.value = (int) FirstValue;
+            value.value = (int) FirstValue;
         }
 
         public int CompareTo(int other)
         {
-            return Value.value.CompareTo(other);
+            return value.value.CompareTo(other);
         }
     }
 }

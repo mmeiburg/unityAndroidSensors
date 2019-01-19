@@ -1,4 +1,3 @@
-using UnityAndroidSensors.Scripts.Sensors;
 using UnityAndroidSensors.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.Events;

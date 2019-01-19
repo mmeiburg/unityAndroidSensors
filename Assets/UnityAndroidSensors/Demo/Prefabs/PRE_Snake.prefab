@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d44572d8244aaf903308123bf6cf14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: {fileID: 0}
+  acceleration: {fileID: 11400000, guid: 46c81d3d55845ba43bb920881da07f13, type: 2}
   bounds: {fileID: 11400000, guid: 683dbf881069f0e41bd0209167005a7b, type: 2}
   rangeOffset: 0.3
   updateInterval: 0.3
