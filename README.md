@@ -14,7 +14,7 @@ A scriptable object is an asset which you can create in the unity inspector. It 
 
 * Grab unityAndroidSensors.unitypackage from the Releases page for everything you need!
 * OR, use the git repository.
-* Tested with Unity 2018.2 or above.
+* Tested with Unity 2018.3 (New Prefab Workflow) or above.
 
 ## How does it work
 
