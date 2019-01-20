@@ -3234,6 +3234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004111971}
   - component: {fileID: 2004111972}
+  - component: {fileID: 2004111973}
   m_Layer: 0
   m_Name: DebugOverlay
   m_TagString: Untagged
@@ -3278,7 +3279,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8efd4f311dc42da84b9af8af7595bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 153419143}
+  canvas: {fileID: 2004111970}
+--- !u!114 &2004111973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004111970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdb5f7cabc24d49992896d3bed7b248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f4b661da225116a4f91f8dc5006f57ef, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2004111972}
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2007516712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,6 +3321,8 @@ GameObject:
   - component: {fileID: 2007516715}
   - component: {fileID: 2007516714}
   - component: {fileID: 2007516716}
+  - component: {fileID: 2007516718}
+  - component: {fileID: 2007516717}
   m_Layer: 5
   m_Name: DayNightOverlay
   m_TagString: Untagged
@@ -3370,6 +3402,64 @@ MonoBehaviour:
   lightOffColor: {r: 0.25882354, g: 0.21568628, b: 0.56078434, a: 0.5019608}
   lightOnColor: {r: 1, g: 1, b: 1, a: 0}
   lerp: 0.3
+--- !u!114 &2007516717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007516712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdb5f7cabc24d49992896d3bed7b248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 1cd13df13f057a049a62e6b1495aa914, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2007516716}
+        m_MethodName: StopNight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2007516718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007516712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdb5f7cabc24d49992896d3bed7b248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6443a480b2a416b4387b657c726c34e9, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2007516716}
+        m_MethodName: StartNight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2035490257
 GameObject:
   m_ObjectHideFlags: 0
@@ -3744,41 +3834,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482188203637581538, guid: 5c01639db721b9a4ba264e7799daa2b3,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482188203637581538, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482188203637581538, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482188203637581538, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482188203637581538, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482188203637581538, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482188203637581538, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 482188203637581538, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
@@ -3837,83 +3892,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2302686791224327300, guid: 5c01639db721b9a4ba264e7799daa2b3,
         type: 3}
-      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2004111972}
-    - target: {fileID: 2302686791224327300, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Toggle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552126874920204859, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.size
+      propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552126874920204859, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552126874920204859, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552126874920204859, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2007516716}
-    - target: {fileID: 1552126874920204859, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartNight
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552126874920204859, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552126874920204859, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6312400667101013487, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6312400667101013487, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6312400667101013487, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6312400667101013487, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2007516716}
-    - target: {fileID: 6312400667101013487, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StopNight
-      objectReference: {fileID: 0}
-    - target: {fileID: 6312400667101013487, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6312400667101013487, guid: 5c01639db721b9a4ba264e7799daa2b3,
-        type: 3}
-      propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c01639db721b9a4ba264e7799daa2b3, type: 3}
@@ -3951,39 +3931,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7564977358129934646, guid: 4e73ca9f40106bc4cb64a573dfdfa23c,
         type: 3}
-      propertyPath: onShakeEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7564977358129934646, guid: 4e73ca9f40106bc4cb64a573dfdfa23c,
-        type: 3}
       propertyPath: accelerationSensor
       value: 
       objectReference: {fileID: 3373828231082537100}
-    - target: {fileID: 7564977358129934646, guid: 4e73ca9f40106bc4cb64a573dfdfa23c,
-        type: 3}
-      propertyPath: onShakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7564977358129934646, guid: 4e73ca9f40106bc4cb64a573dfdfa23c,
-        type: 3}
-      propertyPath: onShakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7564977358129934646, guid: 4e73ca9f40106bc4cb64a573dfdfa23c,
-        type: 3}
-      propertyPath: onShakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2004111972}
-    - target: {fileID: 7564977358129934646, guid: 4e73ca9f40106bc4cb64a573dfdfa23c,
-        type: 3}
-      propertyPath: onShakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Toggle
-      objectReference: {fileID: 0}
-    - target: {fileID: 7564977358129934646, guid: 4e73ca9f40106bc4cb64a573dfdfa23c,
-        type: 3}
-      propertyPath: onShakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e73ca9f40106bc4cb64a573dfdfa23c, type: 3}
 --- !u!114 &3373828231082537100 stripped

@@ -15,7 +15,7 @@ namespace UnityAndroidSensors.Demo.Scripts.Utils
         
         private void Start()
         {
-            canvas.transform.DOLocalMoveY(Screen.height, 0f);
+            canvas.transform.DOLocalMoveX(-Screen.width, 0f);
             itsUp = true;
         }
 
@@ -24,11 +24,11 @@ namespace UnityAndroidSensors.Demo.Scripts.Utils
             if (canvas == null || shakedRecently) {
                 return;
             }
-            
+          
             shakedRecently = true;
 
             canvas.transform
-                .DOLocalMoveY(itsUp ? 0 : Screen.height, 0.3f)
+                .DOLocalMoveX(itsUp ? 0 : -Screen.width, 0.4f)
                 .SetEase(ease)
                 .OnComplete(() =>
                 {

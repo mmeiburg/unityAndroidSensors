@@ -43,11 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0871dd0bbe0b4296a800833bfababfd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  option: 2
+  onEvent: {fileID: 11400000, guid: 1cd13df13f057a049a62e6b1495aa914, type: 2}
   variable: {fileID: 11400000, guid: cb4787d31f988ad43a0ef2a4e90779ad, type: 2}
-  constant: 5
+  contition: 2
+  constant: 0

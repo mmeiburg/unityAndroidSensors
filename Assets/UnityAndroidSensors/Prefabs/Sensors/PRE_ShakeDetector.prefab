@@ -44,8 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: {fileID: 11400000, guid: 46c81d3d55845ba43bb920881da07f13, type: 2}
-  onShakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  onShakeEvent: {fileID: 11400000, guid: f4b661da225116a4f91f8dc5006f57ef, type: 2}

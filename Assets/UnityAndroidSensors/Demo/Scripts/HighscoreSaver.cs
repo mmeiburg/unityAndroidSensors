@@ -1,4 +1,5 @@
 using UnityAndroidSensors.Scripts.Utils;
+using UnityAndroidSensors.Scripts.Utils.SmartVars;
 using UnityEngine;
 
 namespace UnityAndroidSensors.Demo.Scripts

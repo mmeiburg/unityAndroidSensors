@@ -5,7 +5,8 @@ namespace UnityAndroidSensors.Demo.Scripts.Utils.UI
 {
     public enum TweenType {
         Scale,
-        Rotate
+        Rotate,
+        Move
     }
     public class TweenAnimation : MonoBehaviour
     {
@@ -37,10 +38,17 @@ namespace UnityAndroidSensors.Demo.Scripts.Utils.UI
                         .SetDelay(delay);
                     break;
                 case TweenType.Rotate:
-                    transform.DORotate(value, duration)
+                    transform.DOLocalRotate(value, duration)
                         .SetLoops(loops, loopType)
                         .SetEase(ease)
                         .SetDelay(delay);
+                    break;
+                case TweenType.Move:
+                    transform.DOMove(value, duration)
+                        .SetLoops(loops, loopType)
+                        .SetEase(ease)
+                        .SetDelay(delay)
+                        .SetRelative(true);
                     break;
             }
 

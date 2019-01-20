@@ -1,11 +1,11 @@
+using UnityAndroidSensors.Scripts.Utils.SmartEvents;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace UnityAndroidSensors.Demo.Scripts.Actions
 {
     public class ActionOnStart : MonoBehaviour
     {
-        public UnityEvent onStart;
+        public SmartEvent onStart;
 
         private void Start()
         {

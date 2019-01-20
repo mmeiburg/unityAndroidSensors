@@ -37,7 +37,7 @@ namespace UnityAndroidSensors.Demo.Scripts
             
             fade?.Kill();
             fade = spriteRenderer
-                .DOFade(0, Random.Range(2f,3f))
+                .DOFade(0, 3f)
                 .OnComplete(() => { spriteRenderer.enabled = !isHiding; });
         }
 

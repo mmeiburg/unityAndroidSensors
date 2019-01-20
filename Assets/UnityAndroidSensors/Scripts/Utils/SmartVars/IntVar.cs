@@ -1,7 +1,7 @@
 using UnityEngine;
 
-namespace UnityAndroidSensors.Scripts.Utils
+namespace UnityAndroidSensors.Scripts.Utils.SmartVars
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "SmartEvents/IntVar")]
     public class IntVar : SmartVar<int> {}
 }

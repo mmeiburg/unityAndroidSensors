@@ -1,4 +1,6 @@
 using UnityAndroidSensors.Scripts.Utils;
+using UnityAndroidSensors.Scripts.Utils.SmartEvents;
+using UnityAndroidSensors.Scripts.Utils.SmartVars;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,7 +15,7 @@ namespace UnityAndroidSensors.Scripts.Detectors
         [SerializeField]
         private Vector3Var acceleration;
         [SerializeField]
-        private UnityEvent onShakeEvent;
+        private SmartEvent onShakeEvent;
 
         private const float AccelerometerUpdateInterval = 1.0f / 60.0f;
         private const float LowPassKernelWidthInSeconds = 1.0f;

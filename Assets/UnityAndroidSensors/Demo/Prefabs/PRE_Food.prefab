@@ -146,7 +146,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5664644815365654296}
   - component: {fileID: 8278208365764709349}
-  - component: {fileID: 2480057586206196701}
+  - component: {fileID: 8843553533644604836}
+  - component: {fileID: 8051442173814595711}
   m_Layer: 5
   m_Name: PRE_Food
   m_TagString: Untagged
@@ -183,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7162049497435770615}
---- !u!114 &2480057586206196701
+--- !u!114 &8843553533644604836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,53 +193,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 7239474214316331050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f1e525436345d4897593aa0ab32e26, type: 3}
+  m_Script: {fileID: 11500000, guid: bcdb5f7cabc24d49992896d3bed7b248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data:
-  - _owner: {fileID: 2480057586206196701}
-    _propertyPath: _data.Array.data[0]
-    _autoListen: 0
-    _multiIndex: 0
-    _smartEvent: {fileID: 11400000, guid: 55da4c77ebe35b4438eceda90b5a6a9a, type: 2}
-    _smartMulti: {fileID: 0}
-    _useMulti: 0
-    _onEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8278208365764709349}
-          m_MethodName: Show
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - _owner: {fileID: 2480057586206196701}
-    _propertyPath: _data.Array.data[1]
-    _autoListen: 0
-    _multiIndex: 0
-    _smartEvent: {fileID: 11400000, guid: c133d9198465dfd4cac9d07b1ae04c9c, type: 2}
-    _smartMulti: {fileID: 0}
-    _useMulti: 0
-    _onEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8278208365764709349}
-          m_MethodName: Hide
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+  Event: {fileID: 11400000, guid: 1cd13df13f057a049a62e6b1495aa914, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8278208365764709349}
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &8051442173814595711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7239474214316331050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdb5f7cabc24d49992896d3bed7b248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6443a480b2a416b4387b657c726c34e9, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8278208365764709349}
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
