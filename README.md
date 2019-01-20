@@ -16,7 +16,26 @@ A scriptable object is an asset which you can create in the unity inspector. It 
 * OR, use the git repository.
 * Tested with Unity 2018.3 (New Prefab Workflow) or above.
 
-## How does it work
+## What you get
+
+First the simple event system with some smart variables, you can create events and variables with the context menu in the project view.
+
+<img src="https://imgur.com/Y5V1NwW.png" alt="How to create smart vars" width="480" height="80">
+
+Second you get a bunch of preconfigured sensors. For every sensor you can choose the update interval (per frame) and the SmartVar in which the data is stored.
+
+Here for example the light sensor:
+
+<img src="https://imgur.com/EKwcR8B.png" alt="Light" width="480" height="160">
+
+Current available sensor:
+* Light
+* Rotation
+* Acceleration (calibrated)
+* Gravity
+* Gycroscope 
+* Gyrooscope Raw
+* Stepcount
 
 ## How To Use
 
