@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1002324011238405480}
-  - component: {fileID: 1955994778897880242}
+  - component: {fileID: 6231369062381585951}
   m_Layer: 0
   m_Name: PRE_Stepcount
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1955994778897880242
+--- !u!114 &6231369062381585951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +40,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5041869993249540414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b9fbfe357af4d779636c52190a06acc, type: 3}
+  m_Script: {fileID: 11500000, guid: cb9c681ce8b741b4bd99b9830a29b769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensor: 17
   updateInterval: 3
-  value: {fileID: 11400000, guid: 63f2fdec2251ef0429d9a099b89da141, type: 2}
+  returnType: 1
+  sensorOutputNumber: 0
+  vector3Value: {fileID: 0}
+  intValue: {fileID: 11400000, guid: 63f2fdec2251ef0429d9a099b89da141, type: 2}
+  floatValue: {fileID: 0}
+  modifiers: []

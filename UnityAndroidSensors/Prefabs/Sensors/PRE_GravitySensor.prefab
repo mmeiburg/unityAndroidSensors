@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2539181068191431173}
-  - component: {fileID: 3844465622027689889}
+  - component: {fileID: 5660485941877440372}
   m_Layer: 0
   m_Name: PRE_GravitySensor
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3844465622027689889
+--- !u!114 &5660485941877440372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +40,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7722637420819170899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e218a1f085124dc78e64fbe2576d38e5, type: 3}
+  m_Script: {fileID: 11500000, guid: cb9c681ce8b741b4bd99b9830a29b769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensor: 4
   updateInterval: 3
-  value: {fileID: 11400000, guid: 5a176c0b77ea5d1468e9b2aff120b023, type: 2}
+  returnType: 0
+  sensorOutputNumber: 0
+  vector3Value: {fileID: 11400000, guid: 5a176c0b77ea5d1468e9b2aff120b023, type: 2}
+  intValue: {fileID: 0}
+  floatValue: {fileID: 0}
+  modifiers: []

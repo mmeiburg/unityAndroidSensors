@@ -2,29 +2,6 @@
 
 namespace UnityAndroidSensors.Scripts.Core
 {
-    public enum Sensor
-    {
-        accelerometer,
-        ambienttemperature,
-        gamerotationvector,
-        geomagneticrotationvector,
-        gravity,
-        gyroscope,
-        gyroscopeuncalibrated,
-        heartrate,
-        light,
-        linearacceleration,
-        magneticfield,
-        magneticfielduncalibrated,
-        pressure,
-        proximity,
-        relativehumidity,
-        rotationvector,
-        significantmotion,
-        stepcounter,
-        stepdetector,
-    }
-
     /**
      * Handles the connection between Unity and the android SensorManager
      */

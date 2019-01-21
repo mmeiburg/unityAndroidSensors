@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1893357552339318660}
-  - component: {fileID: 6897002449789134933}
+  - component: {fileID: 2091199430803525543}
+  - component: {fileID: 2316902624172800309}
   m_Layer: 0
   m_Name: PRE_GyroscopeSensor
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6897002449789134933
+--- !u!114 &2091199430803525543
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +41,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1893357552339318663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4986b5c51e07488ab167715813bb119a, type: 3}
+  m_Script: {fileID: 11500000, guid: cb9c681ce8b741b4bd99b9830a29b769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensor: 5
   updateInterval: 3
-  value: {fileID: 11400000, guid: 0669f7dbcc9da5040977ccfbb6e36111, type: 2}
+  returnType: 0
+  sensorOutputNumber: 0
+  vector3Value: {fileID: 11400000, guid: 0669f7dbcc9da5040977ccfbb6e36111, type: 2}
+  intValue: {fileID: 0}
+  floatValue: {fileID: 0}
+  modifiers: []
+--- !u!114 &2316902624172800309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893357552339318663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0871dd0bbe0b4296a800833bfababfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  smartEvent: {fileID: 0}
+  eventChoiceType: 0
+  condition: 0
+  useConst: 0
+  constant: 0
+  var1: {fileID: 0}
+  var2: {fileID: 0}

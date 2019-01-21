@@ -2,6 +2,6 @@ using UnityEngine;
 
 namespace UnityAndroidSensors.Scripts.Utils.SmartVars
 {
-    [CreateAssetMenu(menuName = "SmartEvents/FloatVar")]
+    [CreateAssetMenu(menuName = "SensorPlugin/SmartData/FloatVar")]
     public class FloatVar : SmartVar<float> {}
 }
