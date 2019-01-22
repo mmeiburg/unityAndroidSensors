@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e15af3a5f3874b94b3af2330f899078c, type: 3}
   m_Name: Light
   m_EditorClassIdentifier: 
-  defaultValue: 0
+  defaultValue: 6

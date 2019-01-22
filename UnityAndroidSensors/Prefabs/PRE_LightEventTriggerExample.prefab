@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5914830908363824273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5914830908363824274}
+  - component: {fileID: 5914830908363824275}
+  - component: {fileID: 5914830908363824272}
+  m_Layer: 0
+  m_Name: PRE_LightEventTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5914830908363824274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914830908363824273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5914830908363824275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914830908363824273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0871dd0bbe0b4296a800833bfababfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  smartEvent: {fileID: 11400000, guid: 1cd13df13f057a049a62e6b1495aa914, type: 2}
+  eventChoiceType: 0
+  condition: 1
+  useConst: 1
+  constant: 5
+  var1: {fileID: 11400000, guid: cb4787d31f988ad43a0ef2a4e90779ad, type: 2}
+  var2: {fileID: 0}
+--- !u!114 &5914830908363824272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914830908363824273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0871dd0bbe0b4296a800833bfababfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  smartEvent: {fileID: 11400000, guid: 6443a480b2a416b4387b657c726c34e9, type: 2}
+  eventChoiceType: 0
+  condition: 0
+  useConst: 1
+  constant: 0
+  var1: {fileID: 11400000, guid: cb4787d31f988ad43a0ef2a4e90779ad, type: 2}
+  var2: {fileID: 0}

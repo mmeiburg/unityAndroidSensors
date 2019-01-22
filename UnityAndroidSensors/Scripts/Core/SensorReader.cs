@@ -25,7 +25,7 @@ namespace UnityAndroidSensors.Scripts.Core
         public IntVar intValue;
         public FloatVar floatValue;
 
-        public List<SensorValueModifier> modifiers;
+        public List<SensorValueModifier> modifiers = new List<SensorValueModifier>();
         
 #endregion
 

@@ -41,13 +41,10 @@ namespace UnityAndroidSensors.Scripts.Utils.Editor
         {
             serializedObject.Update();
             
-            if (popupStyle == null)
+            popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions"))
             {
-                popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions"))
-                {
-                    imagePosition = ImagePosition.ImageOnly,
-                };
-            }
+                imagePosition = ImagePosition.ImageOnly,
+            };
 
             GUILayout.BeginVertical();
             

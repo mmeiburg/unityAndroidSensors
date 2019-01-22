@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: dced765f95bc460e86beffbf44de3bfd, type: 3}
   m_Name: Acceleration Low Pass Modifier
-  m_EditorClassIdentifier: Assembly-CSharp:UnityAndroidSensors.Scripts.Modifier:AccelerationLowPassModifier
+  m_EditorClassIdentifier: 

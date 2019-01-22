@@ -1,3 +1,4 @@
+using System;
 using UnityAndroidSensors.Scripts.Utils.SmartVars;
 
 namespace UnityAndroidSensors.Scripts.Core.Editor
@@ -19,9 +20,14 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
         private SerializedProperty sensorOutputNumberProperty;
         private SerializedProperty modifierProperty;
         private GUIStyle addModifierButtonStyle;
+        private GUIStyle removeButtonStyle;
 
         private SensorReader sensor;
         private bool showModifier = true;
+        
+        private readonly Color removeButtonColor = new Color(1, 0.4f, 0.4f);
+        private readonly Color addButtonColor = new Color(0, 0.8f, 0.4f);
+        private readonly string descriptionText = "Add a smart event listener";
         
         private void OnEnable()
         {
@@ -44,7 +50,7 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
             serializedObject.Update();
             
             GUI.enabled = false;
-            EditorGUILayout.ObjectField("Script", script, GetType(), false);
+            EditorGUILayout.ObjectField("Script", script, typeof(SensorReader), false);
             GUI.enabled = true;
             
             EditorGUILayout.PropertyField(sensorProperty, new GUIContent("Sensor Type"));
@@ -62,44 +68,67 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
             if (sensor.modifiers == null) {
                 return;
             }
-            if (sensor.modifiers.Count > 0) {
-                showModifier = EditorGUILayout.Foldout(showModifier, "Modifiers");
+            
+            showModifier = EditorGUILayout.Foldout(showModifier, "Modifiers");
                 
-                if (showModifier) {
-
-                    for (int i = 0; i < modifierProperty.arraySize; i++)
-                    {
-                        EditorGUILayout.BeginHorizontal();
-
-                        EditorGUILayout.PropertyField(modifierProperty.GetArrayElementAtIndex(i), GUIContent.none);
-                        
-                        if (GUILayout.Button("Remove", GUILayout.MaxWidth(90))) {
-                            sensor.modifiers.Remove(sensor.modifiers[i]);
-                        }
-                        EditorGUILayout.EndHorizontal();
-                    }
-
-                    DrawAddModifierButton();
-                }
-            } else {
+            if (showModifier) {
+                                
                 DrawAddModifierButton();
+                
+                EditorGUILayout.BeginVertical();
+                for (int i = 0; i < modifierProperty.arraySize; i++)
+                {
+                    EditorGUILayout.BeginHorizontal();
+                    
+                    removeButtonStyle = new GUIStyle(GUI.skin.button) {
+                        fixedWidth = 20,
+                        margin = new RectOffset(0, 15, 0, 0)
+                    };
+                    
+                    Color defaultColor = GUI.backgroundColor;
+                    GUI.backgroundColor = removeButtonColor;
+
+                    DrawButton("-", removeButtonStyle, removeButtonColor,
+                        () => { sensor.modifiers.Remove(sensor.modifiers[i]); });
+                    
+                    GUI.backgroundColor = defaultColor;
+                    
+                    EditorGUILayout.PropertyField(modifierProperty.GetArrayElementAtIndex(i), GUIContent.none);
+
+                    EditorGUILayout.EndHorizontal();
+                }
+                EditorGUILayout.EndVertical();
+
             }
+        }
+        
+        
+        private void DrawButton(string text, GUIStyle style, Color color, Action callback)
+        {
+            Color defaultColor = GUI.backgroundColor;
+            GUI.backgroundColor = color;
+            
+            if (GUILayout.Button(text, style)) {
+                callback?.Invoke();
+            }
+
+            GUI.backgroundColor = defaultColor;
         }
         
         private void DrawAddModifierButton()
         {
             EditorGUILayout.Space();
 
-            if (addModifierButtonStyle == null) {
-                addModifierButtonStyle = new GUIStyle(GUI.skin.button);
-            }
+            addModifierButtonStyle = new GUIStyle(GUI.skin.button) {fixedWidth = 100};
 
             EditorGUILayout.BeginHorizontal();
-            GUILayout.FlexibleSpace();
-            if (GUILayout.Button("Add Modifier",
-                addModifierButtonStyle, GUILayout.MaxWidth(90))) {
-                sensor.modifiers.Add(null);
-            }
+            //GUILayout.FlexibleSpace();
+
+            DrawButton("Add Modifier", addModifierButtonStyle, addButtonColor, () =>
+            {
+                sensor.modifiers.Add(null); 
+            });
+            
             EditorGUILayout.EndHorizontal();
         }
 

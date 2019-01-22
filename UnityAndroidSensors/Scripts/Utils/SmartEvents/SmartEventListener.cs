@@ -1,29 +1,25 @@
-using UnityEngine;
 using UnityEngine.Events;
 
 namespace UnityAndroidSensors.Scripts.Utils.SmartEvents
 {
-    public class SmartEventListener : MonoBehaviour
+    [System.Serializable]
+    public class SmartEventListener
     {
-        [SerializeField]
-        private SmartEvent Event;
-        
-        [SerializeField]
-        private UnityEvent Response;
+        public SmartEvent Event;
+        public UnityEvent response;
 
-        private void OnEnable()
+        public void OnEnable()
         {
             Event?.AddListener(this);
         }
 
-        private void OnDisable()
+        public void OnDisable()
         {
             Event?.RemoveListener(this);
         }
-
         public void Invoke()
         {
-            Response?.Invoke();
+            response?.Invoke();
         }
     }
 }
