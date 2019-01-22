@@ -8,6 +8,8 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
     [CustomEditor(typeof(SensorReader), true), CanEditMultipleObjects]
     public class SensorReaderEditor : Editor
     {
+        private MonoScript script;
+        
         private SerializedProperty returnTypeProperty;
         private SerializedProperty updateIntervalProperty;
         private SerializedProperty vector3ValueProperty;
@@ -23,6 +25,8 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
         {
             sensor = (SensorReader) target;
             
+            script = MonoScript.FromMonoBehaviour((SensorReader) target);
+            
             returnTypeProperty = serializedObject.FindProperty("returnType");
             updateIntervalProperty = serializedObject.FindProperty("updateInterval");
             vector3ValueProperty = serializedObject.FindProperty("vector3Value");
@@ -36,6 +40,10 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
+            
+            GUI.enabled = false;
+            EditorGUILayout.ObjectField("Script", script, GetType(), false);
+            GUI.enabled = true;
             
             EditorGUILayout.PropertyField(sensorProperty, new GUIContent("Sensor Type"));
             EditorGUILayout.PropertyField(returnTypeProperty);

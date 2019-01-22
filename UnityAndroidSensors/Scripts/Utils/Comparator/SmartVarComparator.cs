@@ -33,7 +33,7 @@ namespace UnityAndroidSensors.Scripts.Utils.Comparator
         public CompareCondition condition;
 
         [Tooltip("Use constant")]
-        public bool useConst;
+        public bool useConst = true;
         public TType constant;
 
         public TVarType var1;

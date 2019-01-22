@@ -6,6 +6,8 @@ namespace UnityAndroidSensors.Scripts.Utils.Editor
     [CanEditMultipleObjects]
     public abstract class SmartVarComparatorEditor : Editor
     {
+        private MonoScript script;
+        
         private SerializedProperty constant;
         private SerializedProperty unityEvent;
         private SerializedProperty smartEvent;
@@ -15,13 +17,14 @@ namespace UnityAndroidSensors.Scripts.Utils.Editor
         private SerializedProperty var1;
         private SerializedProperty var2;
 
-        private static GUIStyle toggleButtonStyleNormal;
-        private static GUIStyle toggleButtonStyleToggled;
+        private static GUIStyle popupStyle;
+        private readonly string[] comparisonChoice =
+            { "Use Constant", "Use Variable"};
         
-        private static string[] comparisonChoice = { "Const", "Var" };
-
         private void OnEnable()
         {
+            script = GetScript();
+            
             var1 = serializedObject.FindProperty("var1");
             condition = serializedObject.FindProperty("condition");
             var2 = serializedObject.FindProperty("var2");
@@ -32,21 +35,26 @@ namespace UnityAndroidSensors.Scripts.Utils.Editor
             useConst = serializedObject.FindProperty("useConst");
         }
 
+        protected abstract MonoScript GetScript();
+
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
             
-            if ( toggleButtonStyleNormal == null )
+            if (popupStyle == null)
             {
-                toggleButtonStyleNormal = "Button";
-                toggleButtonStyleNormal.fixedWidth = 60;
-                toggleButtonStyleToggled = new GUIStyle(toggleButtonStyleNormal);
-                toggleButtonStyleToggled.normal.background = toggleButtonStyleToggled.active.background;
-                toggleButtonStyleToggled.fixedWidth = 60;
+                popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions"))
+                {
+                    imagePosition = ImagePosition.ImageOnly,
+                };
             }
 
             GUILayout.BeginVertical();
-
+            
+            GUI.enabled = false;
+            EditorGUILayout.ObjectField("Script", script, GetType(), false);
+            GUI.enabled = true;
+            
             GUILayout.Label("Comparison", EditorStyles.boldLabel);
             GUILayout.BeginHorizontal();
             EditorGUILayout.PropertyField(var1, GUIContent.none, true);
@@ -56,8 +64,10 @@ namespace UnityAndroidSensors.Scripts.Utils.Editor
 
             EditorGUILayout.PropertyField(useConst.boolValue ? constant : var2, GUIContent.none, true);
             
-            useConst.boolValue = EditorGUILayout.Popup(useConst.boolValue ? 0 : 1, comparisonChoice) == 0;
-
+            useConst.boolValue = EditorGUILayout.Popup(
+                         useConst.boolValue ? 0 : 1, comparisonChoice,
+                         popupStyle, GUILayout.MaxWidth(20)) == 0;
+            
             GUILayout.EndHorizontal();
             GUILayout.EndHorizontal();
             GUILayout.Label("Event",  EditorStyles.boldLabel);
@@ -71,7 +81,6 @@ namespace UnityAndroidSensors.Scripts.Utils.Editor
 
             if (enumIndex == 1 || enumIndex == 2) {
                 EditorGUILayout.PropertyField(unityEvent, GUIContent.none);
-                
             }
 
             GUILayout.EndVertical();
