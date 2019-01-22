@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UnityAndroidSensors.Scripts.Utils.SmartEvents
 {
-    [CreateAssetMenu(menuName = "SmartEvents/Event")]
+    [CreateAssetMenu(menuName = "SensorPlugin/SmartData/Event")]
     public class SmartEvent : ScriptableObject, ISerializationCallbackReceiver
     {
         private List<SmartEventListener> listener = new List<SmartEventListener>();

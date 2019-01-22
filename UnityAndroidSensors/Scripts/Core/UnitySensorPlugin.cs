@@ -3,7 +3,7 @@
 namespace UnityAndroidSensors.Scripts.Core
 {
     /**
-     * Handles the connection between Unity and the android SensorManager
+     * Handles the connection between Unity and the Android Sensor Manager
      */
     public class UnitySensorPlugin : MonoBehaviour
     {
