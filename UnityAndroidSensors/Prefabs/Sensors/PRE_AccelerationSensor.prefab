@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 235344838259647849}
-  - component: {fileID: 7784343526028123683}
+  - component: {fileID: 2414161769561783114}
   m_Layer: 0
   m_Name: PRE_AccelerationSensor
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7784343526028123683
+--- !u!114 &2414161769561783114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensor: 0
-  updateInterval: 5
+  updateInterval: 3
   returnType: 0
   sensorOutputNumber: 0
   vector3Value: {fileID: 11400000, guid: 46c81d3d55845ba43bb920881da07f13, type: 2}
   intValue: {fileID: 0}
   floatValue: {fileID: 0}
   modifiers:
-  - {fileID: 11400000, guid: 02e17e9c6e9a5444c88eaca8aa331437, type: 2}
+  - {fileID: 11400000, guid: 54e4a6160e9081c4484e421e0d0b5727, type: 2}

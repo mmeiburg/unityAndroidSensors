@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using UnityAndroidSensors.Scripts.Modifier;
 using UnityAndroidSensors.Scripts.Utils.SmartVars;
 using UnityEngine;
 
 namespace UnityAndroidSensors.Scripts.Core
 {
-   
     /**
      * Reads the selected sensor values and save this into a smart var which can be
      * used elsewhere. You can also determine the update frequency.

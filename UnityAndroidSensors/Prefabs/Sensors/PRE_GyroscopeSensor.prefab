@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1893357552339318660}
   - component: {fileID: 2091199430803525543}
-  - component: {fileID: 2316902624172800309}
   m_Layer: 0
   m_Name: PRE_GyroscopeSensor
   m_TagString: Untagged
@@ -52,27 +51,3 @@ MonoBehaviour:
   intValue: {fileID: 0}
   floatValue: {fileID: 0}
   modifiers: []
---- !u!114 &2316902624172800309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893357552339318663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0871dd0bbe0b4296a800833bfababfd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  smartEvent: {fileID: 0}
-  eventChoiceType: 0
-  condition: 0
-  useConst: 0
-  constant: 0
-  var1: {fileID: 0}
-  var2: {fileID: 0}

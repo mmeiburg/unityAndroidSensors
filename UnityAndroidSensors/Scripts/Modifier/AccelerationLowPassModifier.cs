@@ -1,4 +1,3 @@
-using UnityAndroidSensors.Scripts.Core;
 using UnityEngine;
 
 namespace UnityAndroidSensors.Scripts.Modifier

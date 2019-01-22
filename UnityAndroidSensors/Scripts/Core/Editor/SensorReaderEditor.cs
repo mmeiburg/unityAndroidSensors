@@ -18,9 +18,11 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
         private SerializedProperty sensorProperty;
         private SerializedProperty sensorOutputNumberProperty;
         private SerializedProperty modifierProperty;
+        private GUIStyle addModifierButtonStyle;
 
         private SensorReader sensor;
-
+        private bool showModifier = true;
+        
         private void OnEnable()
         {
             sensor = (SensorReader) target;
@@ -54,8 +56,6 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
             
             serializedObject.ApplyModifiedProperties();
         }
-
-        private bool showModifier = true;
         
         private void DrawModifiers()
         {
@@ -72,7 +72,8 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
                         EditorGUILayout.BeginHorizontal();
 
                         EditorGUILayout.PropertyField(modifierProperty.GetArrayElementAtIndex(i), GUIContent.none);
-                        if (GUILayout.Button("Remove")) {
+                        
+                        if (GUILayout.Button("Remove", GUILayout.MaxWidth(90))) {
                             sensor.modifiers.Remove(sensor.modifiers[i]);
                         }
                         EditorGUILayout.EndHorizontal();
@@ -84,16 +85,19 @@ namespace UnityAndroidSensors.Scripts.Core.Editor
                 DrawAddModifierButton();
             }
         }
-
+        
         private void DrawAddModifierButton()
         {
             EditorGUILayout.Space();
-            GUIStyle style = new GUIStyle(GUI.skin.button) {
-                fixedWidth = 100,
-            };
+
+            if (addModifierButtonStyle == null) {
+                addModifierButtonStyle = new GUIStyle(GUI.skin.button);
+            }
+
             EditorGUILayout.BeginHorizontal();
             GUILayout.FlexibleSpace();
-            if (GUILayout.Button("Add Modifier", style)) {
+            if (GUILayout.Button("Add Modifier",
+                addModifierButtonStyle, GUILayout.MaxWidth(90))) {
                 sensor.modifiers.Add(null);
             }
             EditorGUILayout.EndHorizontal();

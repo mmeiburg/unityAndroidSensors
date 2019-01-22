@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UnityAndroidSensors.Scripts.Core
+namespace UnityAndroidSensors.Scripts.Modifier
 {
     public abstract class SensorValueModifier : ScriptableObject
     {

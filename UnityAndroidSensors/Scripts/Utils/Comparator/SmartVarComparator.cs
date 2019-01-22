@@ -44,18 +44,21 @@ namespace UnityAndroidSensors.Scripts.Utils.Comparator
         private void Update()
         {
             CompareAndInvoke();
-            lastValue = var1.value;
+
+            if (var1 != null) {
+                lastValue = var1.value;
+            }
         }
 
         private void CompareAndInvoke()
         {
             if (var1 == null) {
-                Debug.Log("Var1 should be set");
+                Debug.LogError("Var1 should be set", gameObject);
                 return;
             }
 
             if (var2 == null && !useConst) {
-                Debug.Log("Var2 should be set");
+                Debug.LogError("Var2 should be set", gameObject);
                 return;
             }
 
