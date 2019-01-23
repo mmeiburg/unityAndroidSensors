@@ -17,14 +17,16 @@ Firstly, You have access to every sensor value of the Android _Sensor Manager_.
 Secondly, You get a simple extentable event system which allows you to create _SmartEvents_ and _SmartVars_ in the project view.
 
 ## Events and Variables
-To create a new _SmartEvent_ or a _SmartVar_ you can use the _Create->SensorPlugin->SmartData_ context menu in the project view. 
+
+To create a new _SmartEvent_ or a _SmartVar_ you can use the _Create->SensorPlugin->SmartData_ context menu in the project view.
+
 <img src="https://imgur.com/GEdXIWy.png" alt="Sensor Reader" width="550" height="70">
 
-Events are accessible via the ListenSmartEvent
+Events are accessible via the ListenSmartEvent Component
 
 <img src="https://imgur.com/rIUHGut.png" alt="Sensor Reader" width="250" height="145">
 
-Here you can listen to _SmartEvent_'s. If a event gets fired all callbacks get called.
+Here you can listen to _SmartEvent_'s. If a event gets fired all callbacks get invoked.
 
 These are particularly useful for game-level events, such as starting, pausing the game, a player dying etc.
 
@@ -34,9 +36,9 @@ Variables are just container of data, with the advantage that you can drag & dro
 
 ## Comparators
 
-<img src="https://imgur.com/QTrOR0t.png" alt="Sensor Reader" width="250" height="115">
-
 Float- and IntVars can be compared by the _Float_- or _IntVarComparator_. You can choose to compare with a constant or another smart variable.
+
+<img src="https://imgur.com/QTrOR0t.png" alt="Sensor Reader" width="250" height="115">
 
 ### Unity Sensor Plugin
 
@@ -44,15 +46,15 @@ The heart of the plugin is the _UnitySensorPlugin_ class. You need the class jus
 
 ### Sensor Reader
 
-<img src="https://imgur.com/jv05QNT.png" alt="Sensor Reader" width="300" height="360">
-
 The *Sensor Reader* provides you with some option to choose the right sensor, the output type and the update interval (per frame). The output is stored in a _SmartVar_. This can be of type float, int or Vector3.
 
-If you choose int or float you have the option to select the specific axis of the output value otherwise you get all axis as a Vector3Var.
+If you choose int or float you have the option to select the specific axis of the output value otherwise you get all axis as a _Vector3Var_.
+
+<img src="https://imgur.com/jv05QNT.png" alt="Sensor Reader" width="300" height="360">
 
 ## Modifier
 
 If you want to modifiy the output of a sensor before it is written into a _SmartVar_ you can create a modifier which can manipulate the raw float[3] array from the sensor.
 
 An example of a modifier is in the Modifier folder.
-It is applied to the preconfigured acceleration sensor.
+It is applied to the pre-configured acceleration sensor.
