@@ -58,3 +58,6 @@ If you want to modifiy the output of a sensor before it is written into a _Smart
 
 An example of a modifier is in the Modifier folder.
 It is applied to the pre-configured acceleration sensor.
+
+## New Unity Input System (Update 2019-10-15)
+Hey guys with the new input system the plugin is obsolet. https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Sensors.html
